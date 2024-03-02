@@ -14,8 +14,7 @@ body {
     
 }
 
-#welcome-message {
-    cursor: pointer;
+#message{
     text-align: center;
     margin-bottom: 20px;
     display:block;

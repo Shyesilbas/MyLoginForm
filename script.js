@@ -76,3 +76,24 @@ else{
 }
 
 }
+
+
+function checkPassword() {
+    var password = document.getElementById("password").value;
+  
+    var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,100}$/;
+  
+    if (!passwordPattern.test(password)) {
+      alert("Check the criterias!");
+      return;
+    } 
+
+    var password1 = document.getElementById("password").value;
+    var password2 = document.getElementById("Checkpassword").value;
+
+    if(password1 != password2){
+      alert("Passwords do NOT match!");
+      return;
+    }
+    alert("Thanks for registering!");
+  }

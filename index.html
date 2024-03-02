@@ -11,16 +11,10 @@
     
     <span id="refreshText" onclick="RefreshPage()">Refresh Page</span>
     <div id="Time-container"></div>
-    <hr>
-
-    <div id="welcome-message" onclick="RefreshPage()">
-        <h1>Nice To See You!</h1>
-    </div>
-    
-
-
+    <hr>    
     <div id="Register-container">
 
+        <h1 id="message">Nice to See you here!</h1>
         <form>
             <div class="form-group">
                 <label for="username">
@@ -32,7 +26,7 @@
             </div>
 
             <label for="E-Mail"></label>
-            <input type="text" id="E-mail" name="E-mail" placeholder=" E-mail " required autocomplete="off">
+            <input type="text" id="E-mail" name="E-mail" placeholder=" example@gmail.com" required autocomplete="off">
 
             <label for="username"></label>
             <input type="text" id="Name" name="username" placeholder="Username" required autocomplete="off">
@@ -54,7 +48,7 @@
             <label for="Checkpassword"></label>
             <input type="password" id="Checkpassword" name="Checkpassword" placeholder="Validate Password" required autocomplete="off">
     
-         <button type="submit">Register</button>
+         <button type="submit" onclick="checkPassword()">Register</button>
          <p class="toggle-form" onclick="SwitchForm()"> Do you have an account ?</p>
         </form>
     </div>
