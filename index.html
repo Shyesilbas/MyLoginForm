@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register Form</title>
+
+</head>
+<body>
+    
+    <span id="refreshText" onclick="RefreshPage()">Refresh Page</span>
+    <div id="Time-container"></div>
+    <hr>
+
+    <div id="welcome-message" onclick="RefreshPage()">
+        <h1>Welcome</h1>
+    </div>
+    
+
+    <div id="Register-container">
+
+        <form>
+            <div class="form-group">
+                <label for="username">
+                <input type="text" id="username" name="Name" placeholder="Name" required autocomplete="off">
+                     
+                    <label for="surname"></label>
+                <input type="text" id="surname" name="surName" placeholder="Surname" required autocomplete="off">
+            </div>
+
+            <label for="E-mail"></label>
+            <input type="text" id="E-mail" name="E-mail" placeholder=" E-mail " required autocomplete="off">
+
+            <label for="username"></label>
+            <input type="text" id="Name" name="username" placeholder="Username" required autocomplete="off">
+
+            
+            <label for="password"></label>
+            <input type="password" id="password" name="password" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,100}$/;" oninput="strongPassword(this)" placeholder="Password" required autocomplete="off">
+            <span id="togglePassword"  onclick="togglePassword()">👁️</span>
+            <p id="requirements"> Your password must contain of : </p>
+            <ul id="list">
+                <li>At least eight characters</li>
+                <li>Uppercase Letter</li>
+                <li>Lowercase Letter</li>
+                <li>At least a number</li>
+                <li>And a special character</li>
+              </ul>
+           
+
+            <label for="Checkpassword"></label>
+            <input type="password" id="Checkpassword" name="Checkpassword" placeholder="Validate Password" required autocomplete="off">
+    
+         <button type="submit">Register</button>
+         <p class="toggle-form" onclick="SwitchForm()"> Do you have an account ?</p>
+        </form>
+    </div>
+
+
+    <div id="Login-container">
+        <h2 id="loginmessage">Welcome Back!</h2>
+        <form >
+            <label for="E-mail"></label>
+            <input type="text" id="E-mail" name="E-mail" placeholder="E-mail" required autocomplete="off">
+           
+            <label for="password2"></label>
+            <input type="password" id="password2" name="password2" placeholder="Password" required autocomplete="off">
+            <span id="togglePassword"  onclick="togglePassword2()">👁️</span>
+
+
+            <button type="submit">Login</button>
+            <p class="toggle-form" onclick="SwitchForm()"> Create an account</p>
+        </form>
+    </div>
+    
+<script src="script.js">
+
+    
+</script>
+</body>
+</html>
