@@ -77,14 +77,13 @@ else{
 
 }
 
-
 function checkPassword() {
     var password = document.getElementById("password").value;
   
     var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,100}$/;
   
     if (!passwordPattern.test(password)) {
-      alert("Check the criterias!");
+      alert("Check the Password criterias!");
       return;
     } 
 
@@ -93,7 +92,27 @@ function checkPassword() {
 
     if(password1 != password2){
       alert("Passwords do NOT match!");
+      return false;
+    }
+    return true;
+}
+
+function register() {
+    if (!checkPassword()) {
       return;
     }
-    alert("Thanks for registering!");
-  }
+    var comingSoonText = document.createElement("h1");
+      comingSoonText.innerText = "Coming Soon...";
+      comingSoonText.id = "comingSoonText"; 
+      document.body.innerHTML = ''; 
+      document.body.appendChild(comingSoonText);
+
+      var backButton = document.createElement("button");
+      backButton.innerText = "Back to Registration";
+      backButton.onclick = function() {
+        window.location.reload();
+      };
+
+      document.body.appendChild(backButton);
+    }
+  

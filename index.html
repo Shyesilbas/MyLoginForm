@@ -33,7 +33,7 @@
 
             
             <label for="password"></label>
-            <input type="password" id="password" name="password" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,100}$/;" oninput="strongPassword(this)" placeholder="Password" required autocomplete="off">
+            <input type="password" id="password" name="password"  oninput="strongPassword(this)" placeholder="Password" required autocomplete="off">
             <span id="togglePassword"  onclick="togglePassword()">👁️</span>
             <p id="requirements"> Your password must contain of : </p>
             <ul id="list">
@@ -44,11 +44,10 @@
                 <li>And a special character</li>
               </ul>
            
-
             <label for="Checkpassword"></label>
             <input type="password" id="Checkpassword" name="Checkpassword" placeholder="Validate Password" required autocomplete="off">
     
-         <button type="submit" onclick="checkPassword()">Register</button>
+         <button type="submit" onclick="register()">Register</button>
          <p class="toggle-form" onclick="SwitchForm()"> Do you have an account ?</p>
         </form>
     </div>
@@ -65,7 +64,7 @@
             <span id="togglePassword"  onclick="togglePassword2()">👁️</span>
 
 
-            <button type="submit">Login</button>
+            <button type="submit" onclick="register()">Login</button>
             <p class="toggle-form" onclick="SwitchForm()"> Create an account</p>
         </form>
     </div>
