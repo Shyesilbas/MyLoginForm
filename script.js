@@ -127,4 +127,14 @@ function register() {
 
       document.body.appendChild(backButton);
     }
+    const passwordInput = document.getElementById('password');
+    const requirementsList = document.getElementById('list');
+
+    passwordInput.addEventListener('focus', function () {
+        requirementsList.style.display = 'block';
+    });
+
+    passwordInput.addEventListener('blur', function () {
+        requirementsList.style.display = 'none';
+    });
   

@@ -14,8 +14,10 @@
           <ul>
             <li><a href="https://github.com/Shyesilbas?tab=repositories">My Repositories</a></li>
           </ul>
-         
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Contact</a>
+            <ul>
+                <li><a href="https://mail.google.com">E-MAIL</a></li>
+            </ul>
           <li><a href="#" onclick="SwitchForm()">Register</a></li>
           <li><a href="#" onclick="SwitchForm()">Login</a></li>
         </ul>
@@ -42,8 +44,7 @@
             <input type="password" id="password" name="password"  oninput="strongPassword(this)" placeholder="Password" required autocomplete="off">
             <span id="togglePassword"  onclick="togglePassword()">👁️</span>
             <span id="recommendPassword">Recommend me a Password </span>
-            <p id="requirements"> Your password must contain of : </p>
-            <ul id="list">
+            <ul id="list" style="display:none;">
                 <li>At least eight characters</li>
                 <li>Uppercase Letter</li>
                 <li>Lowercase Letter</li>
