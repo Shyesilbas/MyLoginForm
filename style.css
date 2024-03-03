@@ -132,6 +132,11 @@ input.invalid{
     75% { opacity: 0.75; }
     100% { opacity: 1; }
   }
+  #recommendPassword{
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0 auto;
+  }
   #navbar {
     display: flex;
     justify-content: center;
@@ -157,6 +162,7 @@ input.invalid{
   }
   #navbar li {
     padding: 0 1rem;
+   border-radius: 2px solid #fff;
     
   }
   
