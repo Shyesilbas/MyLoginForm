@@ -115,4 +115,20 @@ function register() {
 
       document.body.appendChild(backButton);
     }
+    function generatePassword(length) {
+        const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}[]|;:,.<>?";
+        let password = "";
+  
+        for (let i = 0; i < length; i++) {
+          const randomIndex = Math.floor(Math.random() * charset.length);
+          password += charset[randomIndex];
+        }
+  
+        return password;
+      }
+  
+      document.getElementById("recommendPassword").addEventListener("click", function() {
+        const newPassword = generatePassword(12); // 12 karakter uzunluğunda bir şifre oluşturur
+        alert(`Recommended Password: ${newPassword}`);
+      });
   

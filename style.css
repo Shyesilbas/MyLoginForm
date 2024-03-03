@@ -108,6 +108,7 @@ input.invalid{
     text-decoration: none;
     color:gray;
     margin-left:20px;
+    cursor:default;
 }
 #loginmessage{
     display:flex;
@@ -131,3 +132,13 @@ input.invalid{
     75% { opacity: 0.75; }
     100% { opacity: 1; }
   }
+
+  #recommendPassword{
+    text-decoration: underline;
+    cursor:pointer;
+    font-size: 15px;
+    margin: 0 auto;
+  }
+  
+
+

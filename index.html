@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    
+
     <span id="refreshText" onclick="RefreshPage()">Refresh Page</span>
     <div id="Time-container"></div>
     <hr>    
@@ -35,6 +35,7 @@
             <label for="password"></label>
             <input type="password" id="password" name="password"  oninput="strongPassword(this)" placeholder="Password" required autocomplete="off">
             <span id="togglePassword"  onclick="togglePassword()">👁️</span>
+            <span id="recommendPassword">Recommend me a Password </span>
             <p id="requirements"> Your password must contain of : </p>
             <ul id="list">
                 <li>At least eight characters</li>
@@ -48,7 +49,7 @@
             <input type="password" id="Checkpassword" name="Checkpassword" placeholder="Validate Password" required autocomplete="off">
     
          <button type="submit" onclick="register()">Register</button>
-         <p class="toggle-form" onclick="SwitchForm()"> Do you have an account ?</p>
+         <p class="toggle-form" onclick="SwitchForm()"> Do you have an account?</p>
         </form>
     </div>
 
