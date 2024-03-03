@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Register Form</title>
-
 </head>
 <body>
-
-    <span id="refreshText" onclick="RefreshPage()">Refresh Page</span>
-    <div id="Time-container"></div>
-    <hr>    
+    
+    <nav id="navbar">
+        <ul>
+          <li><a href="#">Github</a>
+          <ul>
+            <li><a href="https://github.com/Shyesilbas?tab=repositories">My Repositories</a></li>
+          </ul>
+         
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" onclick="SwitchForm()">Register</a></li>
+          <li><a href="#" onclick="SwitchForm()">Login</a></li>
+        </ul>
+      </nav>
     <div id="Register-container">
-
-        <h1 id="message">Nice to See you here!</h1>
         <form>
             <div class="form-group">
                 <label for="username">
@@ -65,7 +71,7 @@
             <span id="togglePassword"  onclick="togglePassword2()">👁️</span>
 
 
-            <button type="submit" onclick="register()">Login</button>
+            <button type="submit" onclick="Login()">Login</button>
             <p class="toggle-form" onclick="SwitchForm()"> Create an account</p>
         </form>
     </div>
