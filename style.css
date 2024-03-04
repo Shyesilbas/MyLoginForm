@@ -191,3 +191,9 @@ input.invalid{
     text-align: center;
   }
 
+  #recommendPassword{
+    cursor: pointer;
+    text-decoration: underline;
+    margin : 0 auto;
+    margin-bottom: 1rem;
+  }
