@@ -7,7 +7,6 @@
     <title>Register Form</title>
 </head>
 <body>
-    
     <nav id="navbar">
         <ul>
           <li><a href="#">GitHub</a>
@@ -18,12 +17,12 @@
             <ul>
                 <li><a href="https://mail.google.com">E-MAIL</a></li>
             </ul>
-          <li><a href="#" onclick="SwitchForm()">Register</a></li>
-          <li><a href="#" onclick="SwitchForm()">Login</a></li>
+          <li><a href="#" onclick="showRegisterForm()">Register</a></li>
+          <li><a href="#" onclick="showLoginForm()">Login</a></li>
         </ul>
       </nav>
     <div id="Register-container">
-        <form>
+        <form id="registerForm" onsubmit="submitForm(event)">
             <div class="form-group">
                 <label for="username">
 
@@ -55,11 +54,23 @@
             <label for="Checkpassword"></label>
             <input type="password" id="Checkpassword" name="Checkpassword" placeholder="Validate Password" required autocomplete="off">
     
-         <button type="submit" onclick="register()">Register</button>
+         <button type="submit" id="register" onclick="openModal()" >Register</button>
+         <div id="myModal" class="modal">
+          <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <h2>Yasal Uyarılar</h2>
+              <p>Uyarı1</p>
+              <p>Uyarı2</p>
+              <p>Uyarı3</p>
+              <p>Uyarı4</p>
+              <p>Uyarı5</p>
+              <input type="checkbox" id="readAndAdmitCheckbox">I Have read and admit.
+              <button onclick="proceedWithRegistration()">Continue</button>
+          </div>
+      </div>
          <p class="toggle-form" onclick="SwitchForm()"> Do you have an account?</p>
         </form>
     </div>
-
 
     <div id="Login-container">
         <h2 id="loginmessage">Welcome Again!</h2>

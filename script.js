@@ -41,6 +41,7 @@ if (registerContainer.style.display === "block" || registerContainer.style.displ
     registerContainer.style.display = "block";
     loginContainer.style.display = "none";
 }
+
 }
 function strongPassword(input){
 var strength = input.value;
@@ -138,3 +139,55 @@ function register() {
         requirementsList.style.display = 'none';
     });
   
+
+    var modal = document.getElementById("myModal");
+        var modalContent = document.querySelector(".modal-content");
+
+        function openModal() {
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        function proceedWithRegistration() {
+            if (readAndAdmitCheckbox.checked) {
+                
+                var comingSoonText = document.createElement("h1");
+                comingSoonText.innerText = "Coming Soon...";
+                comingSoonText.id = "comingSoonText";
+                modalContent.appendChild(comingSoonText);
+
+                var backButton = document.createElement("button");
+                backButton.innerText = "Go Back";
+                backButton.onclick = function () {
+                    RefreshPage();
+                };
+                modalContent.appendChild(backButton);
+            } else {
+                alert('Lütfen şartları kabul edin.');
+            }
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            openModal();
+        }
+        function showLoginForm(){
+          var registerContainer = document.getElementById("Register-container");
+        var loginContainer = document.getElementById("Login-container");
+        
+        loginContainer.style.display="block";
+        registerContainer.style.display="none";
+        
+        }
+        
+        function showRegisterForm(){
+          var registerContainer = document.getElementById("Register-container");
+        var loginContainer = document.getElementById("Login-container");
+        
+        registerContainer.style.display="block";
+        loginContainer.style.display="none";
+        
+        }
