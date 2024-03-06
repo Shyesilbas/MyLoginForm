@@ -152,23 +152,30 @@ function register() {
         }
 
         function proceedWithRegistration() {
-            if (readAndAdmitCheckbox.checked) {
-                
-                var comingSoonText = document.createElement("h1");
-                comingSoonText.innerText = "Coming Soon...";
-                comingSoonText.id = "comingSoonText";
-                modalContent.appendChild(comingSoonText);
+          var readAndAdmitCheckbox = document.getElementById("readAndAdmitCheckbox");
+      
+          if (readAndAdmitCheckbox.checked) {
+              closeModal();
+              displayComingSoon();
+          } else {
+              alert('Lütfen şartları kabul edin.');
+          }
+      }
 
-                var backButton = document.createElement("button");
-                backButton.innerText = "Go Back";
-                backButton.onclick = function () {
-                    RefreshPage();
-                };
-                modalContent.appendChild(backButton);
-            } else {
-                alert('Lütfen şartları kabul edin.');
-            }
-        }
+        function displayComingSoon() {
+          var comingSoonText = document.createElement("h1");
+          comingSoonText.innerText = "Coming Soon...";
+          comingSoonText.id = "comingSoonText";
+          document.body.innerHTML = ''; 
+          document.body.appendChild(comingSoonText);
+      
+          var backButton = document.createElement("button");
+          backButton.innerText = "Go Back";
+          backButton.onclick = function () {
+              window.location.reload();
+          };
+          document.body.appendChild(backButton);
+      }
 
         function submitForm(event) {
             event.preventDefault();
@@ -191,3 +198,4 @@ function register() {
         loginContainer.style.display="none";
         
         }
+        

@@ -234,3 +234,7 @@ input.invalid{
 #rgstrbutton{
   justify-content: center;
 }
+.newpage{
+  display:none;
+  background-color: white;
+}
