@@ -238,3 +238,10 @@ input.invalid{
   display:none;
   background-color: white;
 }
+
+#forgotPassword{
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
