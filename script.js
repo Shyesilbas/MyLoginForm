@@ -143,12 +143,18 @@ function register() {
     var modal = document.getElementById("myModal");
         var modalContent = document.querySelector(".modal-content");
 
+        var modal2 = document.getElementById("myModal2");
+        var modalContent2 = document.querySelector(".modal-content2");
+
+
         function openModal() {
             modal.style.display = "block";
+            modal2.style.display="block";
         }
 
         function closeModal() {
             modal.style.display = "none";
+            modal2.style.display = "none";
         }
 
         function proceedWithRegistration() {
@@ -198,19 +204,12 @@ function register() {
         loginContainer.style.display="none";
         
         }
+  
+  document.getElementById('temporarypassword').innerText = generatePassword(12);
+
+      
         
-        function forgotPassword(){
-          const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!.?";
-        let password = "";
-        for (let i = 0; i < length; i++) {
-          const randomIndex = Math.floor(Math.random() * charset.length);
-          password += charset[randomIndex];
-        }
-  
-        return password;
-      }
-  
-      document.getElementById("forgotPassword").addEventListener("click", function() {
-        const newPassword = generatePassword(12);
-        alert(`Your temporary Password: ${newPassword}`);
-      });
+     
+    
+
+      
